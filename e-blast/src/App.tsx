@@ -8,14 +8,17 @@ import "./App.css";
 
 function App() {
   return (
-    <header>
-      <SignedOut>
-        <SignInButton />
-      </SignedOut>
-      <SignedIn>
-        <UserButton />
-      </SignedIn>
-    </header>
+    <div>
+      <header>
+        <SignedOut>
+          <SignInButton />
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+      </header>
+      Home
+    </div>
   );
 }
 
