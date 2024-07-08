@@ -1,9 +1,5 @@
-import {
-  SignedIn,
-  SignedOut,
-  UserButton,
-  SignInButton
-} from "@clerk/clerk-react";
+import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
+import { Link } from "react-router-dom";
 import Blunderbuss from "../assets/blunderbuss.svg";
 import { Send, SendHorizonal } from "lucide-react";
 const Navbar = () => {
@@ -21,14 +17,17 @@ const Navbar = () => {
         <SendHorizonal size={40} />
       </div>
       <div className="">
-        <SignedOut>
-          <div className="bg-blue-400 text-white px-2 py-1 rounded-md w-fit">
-            <SignInButton />
-          </div>
-        </SignedOut>
         <SignedIn>
           <UserButton />
         </SignedIn>
+        <SignedOut>
+          <Link
+            className="bg-blue-400 text-white px-2 py-1 rounded-md w-fit"
+            to="/sign-in"
+          >
+            Sign In
+          </Link>
+        </SignedOut>
       </div>
     </header>
   );
