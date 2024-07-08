@@ -5,7 +5,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      Home
+      <span className="text-5xl font-bold text-teal-700">BlunderbussPost</span>
     </div>
   );
 }
